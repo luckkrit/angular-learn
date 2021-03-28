@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/**
+Override style
+ */
+body {
+  background-color: #24292e;
+}
+
+.neon-font {
+  font-family: "Train One", cursive;
+}
+
+.abril-font {
+  font-family: "Abril Fatface", cursive;
+}

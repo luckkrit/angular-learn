@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  background-color: darkslateblue;
+  padding: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0 2rem;
+  color: lightcoral;
+  text-shadow: 2px 2px darkorchid;
+}
+
+.navbar a.active {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
