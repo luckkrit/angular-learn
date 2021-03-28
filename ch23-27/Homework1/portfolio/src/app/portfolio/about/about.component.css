@@ -1,0 +1,72 @@
+.background {
+  height: 100%;
+  color: indianred;
+}
+
+.fullname,
+.fullname-label,
+.address,
+.address-label,
+.job,
+.job-label {
+  font-size: 2em;
+  border: 1px solid orchid;
+  box-shadow: darkred 15px 10px;
+  display: table;
+  padding: 15px;
+  margin: 0 15px;
+}
+
+.fullname-label {
+  transform: rotate(15deg);
+}
+
+.address {
+  transform: rotate(-15deg);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  justify-content: space-between;
+}
+
+.wrapper-row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-row-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.wrapper-row-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.line {
+  display: flex;
+  padding: 50px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: #bd67a8 10px;
+  border-style: ridge;
+  flex-wrap: wrap;
+}
+
+.line-w-1 {
+  width: 50%;
+}
+
+.line-w-2 {
+  width: 65%;
+  transform: rotate(-15deg);
+}
+
+.line-w-3 {
+  width: 55%;
+}

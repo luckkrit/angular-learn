@@ -1,1 +1,7 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div *ngFor="let m of menu">
+    <a class="neon-font" routerLinkActive="active" [routerLink]="[m.path]">{{
+      m.title
+    }}</a>
+  </div>
+</nav>

@@ -1,1 +1,12 @@
-<p>employment works!</p>
+<div class="background">
+  <div class="wrapper">
+    <div class="timeline-wrapper">
+      <div *ngFor="let t of timeline" class="time-wrapper">
+        <div class="time-content abril-font">
+          <h2>{{ t.year }}</h2>
+          <p>{{ t.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

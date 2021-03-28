@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 30px 0;
+}
+
+.wrapper-content {
+  height: 100vh;
+  padding: 30px;
+  border: 1px solid orchid;
+  box-shadow: darkslateblue 10px 10px;
+}
