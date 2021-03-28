@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../service/portfolio.service';
 
 @Component({
   selector: 'app-employment',
@@ -6,29 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employment.component.css'],
 })
 export class EmploymentComponent implements OnInit {
-  timeline = [
-    {
-      year: '2014 - 2019',
-      content: 'Programmer',
-    },
-    {
-      year: '2012 - 2014',
-      content: 'Programmer',
-    },
-    {
-      year: '2012 - 2013',
-      content: 'Programmer',
-    },
-    {
-      year: '2007 - 2008',
-      content: 'Programmer',
-    },
-    {
-      year: '2006',
-      content: `Trainee`,
-    },
-  ];
-  constructor() {}
+  timeline = [];
+  constructor(private portfolioService: PortfolioService) {
+    this.timeline = this.portfolioService.getEmployment();
+  }
 
   ngOnInit(): void {}
 }

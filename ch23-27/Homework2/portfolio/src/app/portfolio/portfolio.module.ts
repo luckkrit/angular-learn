@@ -7,6 +7,7 @@ import { EducationComponent } from './education/education.component';
 import { EmploymentComponent } from './employment/employment.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
+import { PortfolioService } from './service/portfolio.service';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
     EmploymentComponent,
     MainComponent,
   ],
+  providers: [PortfolioService],
   imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [PortfolioComponent, RouterModule],
 })

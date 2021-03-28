@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../service/portfolio.service';
 
 @Component({
   selector: 'app-about',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   aboutMe: any = {
-    firstName: 'Krit Chomaitong',
-    location: 'Thailand',
-    job: 'Programmer',
+    firstName: '',
+    location: '',
+    job: '',
   };
-  constructor() {}
+  constructor(private portfolioService: PortfolioService) {
+    this.aboutMe = this.portfolioService.getAboutMe();
+  }
 
   ngOnInit(): void {}
 }
