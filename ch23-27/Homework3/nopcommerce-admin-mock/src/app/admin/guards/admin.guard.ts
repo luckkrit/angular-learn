@@ -34,7 +34,7 @@ export class AdminGuard implements CanActivate {
 
     if (val != null && val === 'true') {
       if (url === '/login') {
-        this.router.parseUrl('/expenses');
+        this.router.parseUrl('/admin');
       } else {
         return true;
       }
