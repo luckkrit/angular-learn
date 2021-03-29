@@ -1,0 +1,129 @@
+<mat-toolbar>Menu</mat-toolbar>
+<mat-accordion displayMode="flat">
+  <ng-container *ngFor="let menuLv1 of menus">
+    <mat-card
+      *ngIf="menuLv1.subs.length === 0"
+      [routerLink]="[menuLv1.path]"
+      [routerLinkActive]="'active'"
+    >
+      <fa-icon [icon]="menuLv1.icon"></fa-icon>
+      <div class="card-title">{{ menuLv1.title }}</div>
+    </mat-card>
+    <mat-expansion-panel
+      *ngIf="menuLv1.subs.length > 0"
+      class="mat-elevation-z0"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <fa-icon [icon]="menuLv1.icon"></fa-icon>
+        </mat-panel-title>
+        <mat-panel-description>{{ menuLv1.title }}</mat-panel-description>
+      </mat-expansion-panel-header>
+      <p *ngFor="let menuLv2 of menuLv1.subs">
+        <ng-container *ngIf="menuLv2.subs.length === 0">
+          <mat-nav-list dense>
+            <mat-list-item
+              [routerLink]="[menuLv2.path]"
+              [routerLinkActive]="'active'"
+            >
+              <mat-icon matListIcon>
+                <fa-icon [icon]="menuLv2.icon"></fa-icon>
+              </mat-icon>
+              <h3 matLine>{{ menuLv2.title }}</h3>
+            </mat-list-item>
+          </mat-nav-list>
+        </ng-container>
+        <ng-container *ngIf="menuLv2.subs.length > 0">
+          <mat-expansion-panel
+            class="mat-elevation-z0"
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <fa-icon [icon]="menuLv2.icon"></fa-icon>
+              </mat-panel-title>
+              <mat-panel-description>{{ menuLv2.title }}</mat-panel-description>
+            </mat-expansion-panel-header>
+            <ng-container *ngFor="let menuLv3 of menuLv2.subs">
+              <mat-nav-list dense>
+                <mat-list-item
+                  [routerLink]="[menuLv3.path]"
+                  [routerLinkActive]="'active'"
+                >
+                  <mat-icon matListIcon>
+                    <fa-icon [icon]="menuLv3.icon"></fa-icon>
+                  </mat-icon>
+                  <h3 matLine>{{ menuLv3.title }}</h3>
+                </mat-list-item>
+              </mat-nav-list>
+            </ng-container>
+          </mat-expansion-panel>
+        </ng-container>
+      </p>
+    </mat-expansion-panel>
+  </ng-container>
+</mat-accordion>
+<!--<mat-accordion displayMode="flat">-->
+<!--  <mat-card [routerLink]="['/dashboard']" [routerLinkActive]="'active'">-->
+<!--    <fa-icon [icon]="faDesktop"></fa-icon>-->
+<!--    <div class="card-title">Dashboard</div>-->
+<!--  </mat-card>-->
+<!--  <mat-expansion-panel-->
+<!--    class="mat-elevation-z0"-->
+<!--    (opened)="panelOpenState = true"-->
+<!--    (closed)="panelOpenState = false"-->
+<!--  >-->
+<!--    <mat-expansion-panel-header [class.active]="rla.isActive">-->
+<!--      <mat-panel-title>-->
+<!--        <fa-icon [icon]="faBook"></fa-icon>-->
+<!--      </mat-panel-title>-->
+<!--      <mat-panel-description> Catalog </mat-panel-description>-->
+<!--    </mat-expansion-panel-header>-->
+<!--    <p-->
+<!--      [routerLink]="['/products']"-->
+<!--      [routerLinkActive]="'active'"-->
+<!--      #rla="routerLinkActive"-->
+<!--    >-->
+<!--      <mat-nav-list dense>-->
+<!--        <mat-list-item>-->
+<!--          <mat-icon matListIcon>-->
+<!--            <fa-icon [icon]="faDotCircle"></fa-icon>-->
+<!--          </mat-icon>-->
+<!--          <h3 matLine>Products</h3>-->
+<!--        </mat-list-item>-->
+<!--      </mat-nav-list>-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <mat-expansion-panel-->
+<!--        class="mat-elevation-z0"-->
+<!--        (opened)="panelOpenState = true"-->
+<!--        (closed)="panelOpenState = false"-->
+<!--      >-->
+<!--        <mat-expansion-panel-header [class.active]="rla.isActive">-->
+<!--          <mat-panel-title>-->
+<!--            <fa-icon [icon]="faBook"></fa-icon>-->
+<!--          </mat-panel-title>-->
+<!--          <mat-panel-description> Attributes </mat-panel-description>-->
+<!--        </mat-expansion-panel-header>-->
+<!--        <p-->
+<!--          [routerLink]="['/products']"-->
+<!--          [routerLinkActive]="'active'"-->
+<!--          #rla="routerLinkActive"-->
+<!--        >-->
+<!--          <mat-nav-list dense>-->
+<!--            <mat-list-item>-->
+<!--              <mat-icon matListIcon>-->
+<!--                <fa-icon [icon]="faCircle"></fa-icon>-->
+<!--              </mat-icon>-->
+<!--              <h3 matLine>Product Attributes</h3>-->
+<!--            </mat-list-item>-->
+<!--          </mat-nav-list>-->
+<!--        </p>-->
+<!--        <p></p>-->
+<!--      </mat-expansion-panel>-->
+<!--    </p>-->
+<!--  </mat-expansion-panel>-->
+<!--</mat-accordion>-->

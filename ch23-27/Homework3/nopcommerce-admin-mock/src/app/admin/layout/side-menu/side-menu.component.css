@@ -1,0 +1,12 @@
+.card-title {
+  display: inline-block;
+  padding-left: 16px;
+}
+
+mat-card:hover {
+  cursor: pointer;
+}
+.active {
+  border-left: 3px solid dodgerblue;
+  border-radius: 0;
+}
