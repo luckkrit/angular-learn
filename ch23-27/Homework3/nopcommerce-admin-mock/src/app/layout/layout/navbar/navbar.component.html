@@ -10,7 +10,7 @@
   <span></span>
   <div class="toolbar-right">
     <div class="user-login">John Smith</div>
-    <div class="logout">Logout</div>
+    <div class="logout" (click)="onLogout()">Logout</div>
     <button mat-button [matMenuTriggerFor]="menu">
       <fa-icon [icon]="faCogs"></fa-icon>
     </button>

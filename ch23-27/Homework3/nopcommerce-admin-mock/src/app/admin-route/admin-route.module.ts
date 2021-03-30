@@ -12,6 +12,11 @@ import { ProductDetailsComponent } from '../catalog/product-details/product-deta
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/admin',
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },

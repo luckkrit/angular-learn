@@ -8,22 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  userName = 'admin';
-  password = 'admin';
-  constructor(
-    private authenticationService: AuthenticationService,
-    private router: Router
-  ) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.authenticationService
-      .login(this.userName, this.password)
-      .subscribe((data) => {
-        console.log('Is Login Success: ' + data);
-
-        if (data) {
-          this.router.navigate(['/admin']);
-        }
-      });
-  }
+  ngOnInit(): void {}
 }

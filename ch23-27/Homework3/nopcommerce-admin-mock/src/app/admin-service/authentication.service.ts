@@ -9,8 +9,6 @@ export class AuthenticationService {
   isUserLoggedIn = false;
 
   login(userName: string, password: string): Observable<boolean> {
-    console.log(userName);
-    console.log(password);
     this.isUserLoggedIn = userName === 'admin' && password === 'admin';
     localStorage.setItem(
       'isUserLoggedIn',

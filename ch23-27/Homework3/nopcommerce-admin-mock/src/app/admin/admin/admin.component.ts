@@ -16,11 +16,11 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     if (this.authenticationService.getLoginStatus()) {
       this.isLogin = true;
-      this.router.navigate(['/dashboard']);
       console.log('login');
+      this.router.navigate(['/dashboard']);
     } else {
       this.isLogin = false;
-      console.log('not login');
+      // console.log('not login');
     }
   }
 }

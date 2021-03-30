@@ -3,15 +3,13 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
 import { AdminRouteModule } from '../admin-route/admin-route.module';
 import { MaterialModule } from '../material/material.module';
-import { LayoutComponent } from './layout/layout.component';
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SideMenuComponent } from './layout/side-menu/side-menu.component';
 import { CatalogModule } from '../catalog/catalog.module';
-import { NavbarComponent } from './layout/navbar/navbar.component';
+import { AuthenticationModule } from '../authentication/authentication.module';
 
 @NgModule({
-  declarations: [AdminComponent, LayoutComponent, SideMenuComponent, NavbarComponent],
+  declarations: [AdminComponent],
   imports: [
     CommonModule,
     AdminRouteModule,
@@ -19,6 +17,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     DashboardModule,
     FontAwesomeModule,
     CatalogModule,
+    AuthenticationModule,
   ],
   exports: [AdminComponent],
 })

@@ -7,6 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { AdminRouteModule } from '../admin-route/admin-route.module';
 import { ProductDetailsFormComponent } from './product-details/product-details-form/product-details-form.component';
 import { AdminServiceModule } from '../admin-service/admin-service.module';
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,12 @@ import { AdminServiceModule } from '../admin-service/admin-service.module';
     ProductListTableComponent,
     ProductDetailsFormComponent,
   ],
-  imports: [CommonModule, MaterialModule, AdminRouteModule, AdminServiceModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    AdminRouteModule,
+    AdminServiceModule,
+    LayoutModule,
+  ],
 })
 export class CatalogModule {}

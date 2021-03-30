@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ProductService } from '../../../admin-service/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../../../models/product';
+import { Product } from '../../../admin-models/product';
 
 @Component({
   selector: 'app-product-details-form',

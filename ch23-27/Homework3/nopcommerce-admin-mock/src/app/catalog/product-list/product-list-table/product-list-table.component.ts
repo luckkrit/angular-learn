@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { ProductListTableDataSource } from './product-list-table-datasource';
-import { Product } from '../../../models/product';
+import { Product } from '../../../admin-models/product';
 import { ProductService } from '../../../admin-service/product.service';
 
 @Component({
