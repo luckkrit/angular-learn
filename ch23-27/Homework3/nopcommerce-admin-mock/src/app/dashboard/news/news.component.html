@@ -1,0 +1,10 @@
+<app-window [title]="'NopCommerce News'" [icon]="faNewspaper">
+  <div class="news-wrapper">
+    <mat-card *ngFor="let n of news">
+      <mat-card-header>
+        <mat-card-title [innerHTML]="n.title"></mat-card-title>
+      </mat-card-header>
+      <mat-card-content [innerHTML]="n.content"></mat-card-content>
+    </mat-card>
+  </div>
+</app-window>

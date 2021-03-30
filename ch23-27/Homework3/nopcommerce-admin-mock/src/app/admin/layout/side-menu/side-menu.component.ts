@@ -59,7 +59,7 @@ export class SideMenuComponent implements OnInit {
         ),
       ]),
     ]),
-    new SideMenu('Sales', faBook, '', [
+    new SideMenu('Sales', faShoppingCart, '', [
       new SideMenu('Orders', faDotCircle, '/orders', []),
       new SideMenu('Shipments', faDotCircle, '/shipments', []),
       new SideMenu('Return requests', faDotCircle, '/return-requests', []),

@@ -1,0 +1,39 @@
+<mat-accordion
+  class="window"
+  displayMode="flat"
+  [style.display]="isDelete ? 'none' : 'block'"
+>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+    hideToggle="true"
+    [expanded]="true"
+    [disabled]="true"
+    #mep="matExpansionPanel"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title
+        ><fa-icon [icon]="icon" class="active-color"></fa-icon>
+        <div class="window-title active-color">{{ title }}</div>
+      </mat-panel-title>
+      <mat-panel-description>
+        <div class="buttons-panel active-color">
+          <fa-icon
+            [icon]="faMinus"
+            (click)="mep.expanded = !mep.expanded"
+            class="hide-button"
+          ></fa-icon>
+          <fa-icon
+            [icon]="faTimes"
+            (click)="onDestroy()"
+            class="close-button"
+            *ngIf="showDelete"
+          ></fa-icon>
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="window-content">
+      <ng-content></ng-content>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
