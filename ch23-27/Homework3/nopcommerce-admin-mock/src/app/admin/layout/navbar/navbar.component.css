@@ -1,0 +1,15 @@
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.toolbar-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.toolbar-right .user-login,
+.toolbar-right .logout,
+fa-icon {
+  padding: 0 10px;
+}

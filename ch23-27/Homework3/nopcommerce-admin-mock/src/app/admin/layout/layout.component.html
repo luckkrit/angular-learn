@@ -11,17 +11,7 @@
     <app-side-menu></app-side-menu>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>nopcommerce-admin-mock</span>
-    </mat-toolbar>
+    <app-navbar [drawer]="drawer"></app-navbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>

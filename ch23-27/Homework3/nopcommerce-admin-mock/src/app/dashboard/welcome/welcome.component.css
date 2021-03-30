@@ -1,6 +1,11 @@
 .content {
   text-align: center;
 }
+p {
+  font-size: 1.25rem;
+  font-weight: 100;
+  padding: 20px 30px;
+}
 .configuration-wrapper {
   display: flex;
   flex-wrap: wrap;

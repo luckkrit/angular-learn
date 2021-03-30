@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span></span>
+  <div class="toolbar-right">
+    <div class="user-login">John Smith</div>
+    <div class="logout">Logout</div>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <fa-icon [icon]="faCogs"></fa-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Clear cache</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
