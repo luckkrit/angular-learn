@@ -2,10 +2,9 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import {
-  ProductListTableDataSource,
-  ProductListTableItem,
-} from './product-list-table-datasource';
+import { ProductListTableDataSource } from './product-list-table-datasource';
+import { Product } from '../../../models/product';
+import { ProductService } from '../../../admin-service/product.service';
 
 @Component({
   selector: 'app-product-list-table',
@@ -15,7 +14,7 @@ import {
 export class ProductListTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<ProductListTableItem>;
+  @ViewChild(MatTable) table!: MatTable<Product>;
   dataSource: ProductListTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
@@ -29,8 +28,8 @@ export class ProductListTableComponent implements AfterViewInit {
     'edit',
   ];
 
-  constructor() {
-    this.dataSource = new ProductListTableDataSource();
+  constructor(private productService: ProductService) {
+    this.dataSource = new ProductListTableDataSource(this.productService);
   }
 
   ngAfterViewInit(): void {
