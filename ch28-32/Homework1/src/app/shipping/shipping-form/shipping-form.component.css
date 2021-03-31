@@ -1,0 +1,54 @@
+.container-fluid {
+  height: 100vh;
+}
+.header {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M505.581%2c410.952C531.059%2c410.972%2c555.674%2c397.866%2c567.273%2c375.181C578.051%2c354.102%2c568.932%2c330.32%2c557.371%2c309.661C545.433%2c288.327%2c530.026%2c264.656%2c505.581%2c264.938C481.398%2c265.217%2c467.613%2c289.718%2c455.819%2c310.833C444.439%2c331.206%2c433.673%2c354.185%2c444.059%2c375.082C455.383%2c397.866%2c480.138%2c410.932%2c505.581%2c410.952' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M715.338%2c247.534C745.05%2c248.779%2c771.035%2c227.422%2c784.183%2c200.748C795.989%2c176.798%2c789.001%2c149.289%2c774.959%2c126.578C761.758%2c105.227%2c740.425%2c90.282%2c715.338%2c89.401C688.605%2c88.462%2c661.096%2c98.799%2c647.995%2c122.12C635.105%2c145.065%2c643.36%2c172.182%2c655.81%2c195.369C669.188%2c220.283%2c687.085%2c246.35%2c715.338%2c247.534' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M111.355%2c685.966C155.171%2c689.089%2c204.697%2c680.541%2c226.288%2c642.286C247.659%2c604.422%2c225.702%2c560.113%2c203.478%2c522.743C181.932%2c486.514%2c153.475%2c450.664%2c111.355%2c449.029C66.949%2c447.305%2c25.885%2c475.357%2c5.952%2c515.075C-12.272%2c551.387%2c0.357%2c593.121%2c21.685%2c627.701C41.741%2c660.218%2c73.247%2c683.249%2c111.355%2c685.966' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M465.9567957293405 368.3602861840177L374.15640628634185 419.24607297916106 425.04219308148527 511.0464624221597 516.8425825244839 460.1606756270163z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1261.857%2c245.684C1314.174%2c245.936%2c1354.979%2c206.206%2c1381.335%2c161.011C1407.936%2c115.397%2c1422.934%2c60.004%2c1396.944%2c14.039C1370.633%2c-32.494%2c1315.311%2c-49.786%2c1261.857%2c-50.296C1207.32%2c-50.816%2c1148.844%2c-36.187%2c1122.23%2c11.417C1096.063%2c58.222%2c1116.906%2c113.806%2c1144.36%2c159.868C1170.974%2c204.52%2c1209.876%2c245.433%2c1261.857%2c245.684' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M628.4407176958422 272.54123860687463L541.2836148637576 196.77672500845836 465.5191012653413 283.93382784054296 552.6762040974259 359.69834143895923z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  height: 11%;
+}
+.content {
+  background-color: #8bb8e6;
+  display: flex;
+  justify-content: center;
+  height: 89%;
+}
+.form-wrapper {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px 50px;
+}
+input[type="text"],
+input[type="email"] {
+  border: 0;
+  border-bottom: #d0d0d0 1px;
+  border-bottom-style: groove;
+}
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: #333333 1px;
+  border-bottom-style: groove;
+}
+input[placeholder]:hover {
+  font-weight: bold;
+  color: #000000;
+}
+input[placeholder]:focus {
+  font-weight: normal;
+}
+.is-required::after {
+  content: " * ";
+  color: red;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 1rem;
+}
+input[type="text"].is-invalid,
+input[type="email"].is-invalid {
+  border-bottom: red 1px;
+  border-bottom-style: groove;
+}
