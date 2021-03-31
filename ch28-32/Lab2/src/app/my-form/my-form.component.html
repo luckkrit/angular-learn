@@ -17,16 +17,48 @@
           id="email"
           class="form-control"
           formControlName="email"
+          [class.is-invalid]="
+            contactForm.get('email').errors?.required ||
+            contactForm.get('email').errors?.email
+          "
         />
+        <div
+          class="invalid-feedback"
+          *ngIf="contactForm.get('email').errors?.required"
+        >
+          Email is required
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="contactForm.get('email').errors?.email"
+        >
+          Email is invalid
+        </div>
       </div>
       <div class="form-group">
-        <label for="password">Password</label
-        ><input
+        <label for="password">Password</label>
+        <input
           type="password"
           id="password"
           class="form-control"
           formControlName="password"
+          [class.is-invalid]="
+            contactForm.get('password').errors?.required ||
+            contactForm.get('password').errors?.minlength
+          "
         />
+        <div
+          class="invalid-feedback"
+          *ngIf="contactForm.get('password').errors?.minlength"
+        >
+          Password minimum 8 characters
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="contactForm.get('password').errors?.required"
+        >
+          Password is required
+        </div>
       </div>
       <div class="form-group">
         <label for="confirm-password">Confirm Password </label
@@ -35,12 +67,33 @@
           id="confirm-password"
           class="form-control"
           formControlName="confirmPassword"
+          [class.is-invalid]="
+            contactForm.get('confirmPassword').errors?.required ||
+            contactForm.get('confirmPassword').errors?.minlength
+          "
         />
+        <div
+          class="invalid-feedback"
+          *ngIf="contactForm.get('confirmPassword').errors?.minlength"
+        >
+          Confirm password minimum 8 characters
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="contactForm.get('confirmPassword').errors?.required"
+        >
+          Confirm password is required
+        </div>
+        <div class="invalid-feedback" *ngIf="isPasswordMatch()">
+          Password is not match
+        </div>
       </div>
-      <button class="btn btn-primary">Submit</button>
+      <button class="btn btn-primary" [disabled]="validateForm()">
+        Submit
+      </button>
     </form>
     <hr />
-    <div class="m-auto w-75">
+    <div class="m-auto w-100">
       <h3 class="my-5">Form Data Below</h3>
       <code class="bg-dark py-3 px-2 text-white w-100"
         >{{ contactForm.value | json }}
