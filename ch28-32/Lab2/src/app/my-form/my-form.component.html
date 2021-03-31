@@ -1,0 +1,50 @@
+<div class="container" [formGroup]="contactForm">
+  <div class="m-5 p-5 border border-dark">
+    <form class="w-50 m-auto">
+      <div class="form-group">
+        <label for="phone">Phone</label
+        ><input
+          type="text"
+          id="phone"
+          class="form-control"
+          formControlName="phone"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label
+        ><input
+          type="email"
+          id="email"
+          class="form-control"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label
+        ><input
+          type="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password </label
+        ><input
+          type="password"
+          id="confirm-password"
+          class="form-control"
+          formControlName="confirmPassword"
+        />
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+    <hr />
+    <div class="m-auto w-75">
+      <h3 class="my-5">Form Data Below</h3>
+      <code class="bg-dark py-3 px-2 text-white w-100"
+        >{{ contactForm.value | json }}
+      </code>
+    </div>
+  </div>
+</div>
