@@ -1,0 +1,13 @@
+<input
+  type="text"
+  class="form-control"
+  [value]="value"
+  (change)="onChange()"
+  [(ngModel)]="value"
+/>
+<div class="caret-down" (click)="showDropdown()">&#9660;</div>
+<ul class="dropdown-list" [class.show]="show">
+  <li *ngFor="let option of values" (click)="onSelectedDropdown(option)">
+    {{ option }}
+  </li>
+</ul>

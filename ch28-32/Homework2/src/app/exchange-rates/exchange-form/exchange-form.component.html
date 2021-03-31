@@ -1,1 +1,57 @@
-<p>exchange-form works!</p>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-row">
+      <div class="form-group col-md">
+        <label for="from">From</label>
+        <app-dropdown-list
+          id="from"
+          [values]="currencyCodes"
+          (OnSelected)="onFromSelected($event)"
+          (OnChanged)="onFromChanged($event)"
+          [value]="from"
+        ></app-dropdown-list>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md">
+        <label for="from_value">Value</label>
+        <input
+          id="from_value"
+          type="text"
+          class="form-control"
+          [(ngModel)]="fromValue"
+          (ngModelChange)="fromValueChanged($event)"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 switch-panel">
+    <a (click)="switchCurrency()" class="btn btn-primary">Switch</a>
+  </div>
+  <div class="col-md-4">
+    <div class="form-row">
+      <div class="form-group col-md">
+        <label for="to">To</label>
+        <app-dropdown-list
+          id="to"
+          [values]="currencyCodes"
+          (OnSelected)="onToSelected($event)"
+          (OnChanged)="ontoChanged($event)"
+          [value]="to"
+        ></app-dropdown-list>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md">
+        <label for="to_value">Value</label>
+        <input
+          id="to_value"
+          type="text"
+          class="form-control"
+          [(ngModel)]="toValue"
+          (ngModelChange)="toValueChanged($event)"
+        />
+      </div>
+    </div>
+  </div>
+</div>

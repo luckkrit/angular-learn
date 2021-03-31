@@ -1,0 +1,36 @@
+.caret-down {
+  width: 30px;
+  height: 30px;
+  color: #eeeeee;
+  background-color: #333333;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 35px;
+}
+.dropdown-list {
+  display: none;
+}
+.dropdown-list.show {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 10px;
+  display: block;
+  width: inherit;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  color: #eeeeee;
+  background-color: #333333;
+  z-index: 999;
+  height: 300px;
+  overflow-y: scroll;
+  width: 95%;
+}
+.dropdown-list.show li {
+  padding: 5px;
+}
+.dropdown-list.show li:hover {
+  background-color: #125699;
+}
