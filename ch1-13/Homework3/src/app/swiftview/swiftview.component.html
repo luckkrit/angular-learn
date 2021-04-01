@@ -1,0 +1,249 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="header-row">
+        <div class="header-col">
+          <img
+            src="https://www.swiftview.com/wp-content/themes/swiftview/img/logo.png"
+            width="181"
+            height="126"
+          />
+        </div>
+        <div class="menu-wrapper">
+          <div class="navigation">
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Sales</a></li>
+              <li>
+                <div class="search-wrapper">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="input-search"
+                    #search
+                    (mouseleave)="hideSearch()"
+                  />
+                  <span class="btn-search" (mouseenter)="showSearch()"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="container">
+      <div class="hero-row">
+        <div class="hero-col">
+          <div class="hero-description">
+            <h1>View and Print PCL, HPGL and TIFF documents with SwiftView.</h1>
+            <p class="sub-description">
+              SwiftView Standard Viewer displays, prints and searches the
+              industry-standard print streams: PCL, HPGL and TIFF.
+            </p>
+            <p>&nbsp;</p>
+            <p class="btn-groups">
+              <a
+                class="btn btn-transparent"
+                href="https://www.swiftview.com/product/swiftview-viewer/"
+                >LEARN MORE</a
+              ><a
+                class="btn btn-red"
+                href="https://www.swiftview.com/sales/30-day-evaluation/"
+                >DOWNLOAD 30 DAY&nbsp;TRIAL</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="hero-col">
+          <img
+            src="https://www.swiftview.com/wp-content/uploads/2016/07/desktop_banner_graphic.png"
+            alt=""
+            width="520"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="marketing">
+    <div class="top">
+      <div class="container">
+        <ul>
+          <li [class.active]="selectedIndex === 0">
+            <a href="#" (click)="onSelected(0, $event)">{{
+              "what do you need?" | uppercase
+            }}</a>
+          </li>
+          <li [class.active]="selectedIndex === 1">
+            <a href="#" (click)="onSelected(1, $event)">{{
+              "what is your bussiness?" | uppercase
+            }}</a>
+          </li>
+          <li [class.active]="selectedIndex === 2">
+            <a href="#" (click)="onSelected(2, $event)">{{
+              "are you a customer?" | uppercase
+            }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="container">
+        <div class="marketing-row">
+          <div class="marketing-col">
+            <img
+              src="https://www.swiftview.com/wp-content/uploads/2015/03/business3.png"
+              class="feature"
+            />
+          </div>
+          <div class="marketing-col">
+            <div class="tab-content">
+              <ul *ngIf="selectedIndex === 0">
+                <li><a href="#">View PCL, TIFF, or HPGL files</a></li>
+                <li><a href="#">Convert files</a></li>
+                <li><a href="#">Capture documents in your workflow</a></li>
+                <li><a href="#">Purchase a license</a></li>
+                <li><a href="#">Try our software for 30 days</a></li>
+                <li><a href="#">Technical support</a></li>
+              </ul>
+              <ul *ngIf="selectedIndex === 1">
+                <li>
+                  <a href="#"
+                    >We're trying to create and/or view PCL, TIFF or HPGL
+                    files</a
+                  >
+                </li>
+                <li><a href="#">We're interested in becoming a partner</a></li>
+                <li><a href="#">We're a systems integrator</a></li>
+                <li>
+                  <a href="#"
+                    >We're being directed to use SwiftView by another website or
+                    application</a
+                  >
+                </li>
+              </ul>
+              <ul *ngIf="selectedIndex === 2">
+                <li>
+                  <a href="#">Read our manuals and quick-start guides</a>
+                </li>
+                <li><a href="#">Get techinal support</a></li>
+                <li><a href="#">Replace a license</a></li>
+                <li>
+                  <a href="#">Renew maintenance & support coverage</a>
+                </li>
+                <li>
+                  <a href="#">Download the most current installer</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="support">
+    <div class="container">
+      <div class="support-row">
+        <div class="support-col">
+          <p>
+            <a
+              href="https://www.swiftview.com/wp-content/uploads/2015/03/SWIFTVIEW-PAPERBOS-LOGO_transparent.png"
+              ><img
+                class="size-full wp-image-1268 aligncenter"
+                src="https://www.swiftview.com/wp-content/uploads/2015/03/SWIFTVIEW-PAPERBOS-LOGO_transparent.png"
+                alt=""
+                width="270"
+                height="189"
+            /></a>
+          </p>
+          <p>
+            SwiftView&nbsp;is now part of&nbsp;PAPERBOS LLC<a
+              href="http://www.bkfs.com/Pages/default.aspx"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              data-saferedirecturl="https://www.google.com/url?q=http://www.bkfs.com/Pages/default.aspx&amp;source=gmail&amp;ust=1535727469986000&amp;usg=AFQjCNHcAgSkuypT-R8Q6bb-7e_ntL2Qeg"
+              >.</a
+            >, a leading provider of automated, customized, and optimized paper
+            reduction software solutions.
+          </p>
+        </div>
+        <div class="support-col">
+          <div class="blog">&nbsp;</div>
+        </div>
+        <div class="support-col">
+          <div class="support-articles">
+            <p class="support-header">Popular Tech Support Articles</p>
+            <ul>
+              <li><a href="#">SwiftView no long appears when launched</a></li>
+              <li><a href="#">A red X appears instead of my document</a></li>
+              <li><a href="#">Pipe write error 232</a></li>
+              <li><a href="#">Filename is not a valid win32 Application</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sitemap">
+    <div class="container">
+      <div class="sitemap-row">
+        <div class="sitemap-col">
+          <div class="sitemap-header">HOME</div>
+        </div>
+        <div class="sitemap-col">
+          <div class="sitemap-header">PRODUCTS</div>
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Convert</a></li>
+            <li><a href="#">Stamp</a></li>
+            <li><a href="#">Capture</a></li>
+            <li><a href="#">Platform</a></li>
+            <li><a href="#">Utilities</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <div class="sitemap-header">SUPPORT</div>
+          <ul>
+            <li><a href="#">Technical Support</a></li>
+            <li><a href="#">Manuals</a></li>
+            <li><a href="#">License Replacement</a></li>
+            <li><a href="#">For Customers</a></li>
+            <li><a href="#">Contact Support</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <div class="sitemap-header">PARTNERS</div>
+        </div>
+        <div class="sitemap-col">
+          <div class="sitemap-header">SALES</div>
+        </div>
+        <div class="sitemap-col">
+          <div class="sitemap-header">CONTACT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="copyright">
+        ™ ℠ ®Trademark(s) of PAPERBOS LLC, or an affiliate. © 2018 PAPERBOS LLC.
+        All Rights Reserved.
+      </div>
+      <div class="linkedin"></div>
+      <div class="contact">
+        <a href="#">406-545-5206</a> | <a href="#">Privacy Statement</a> |
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</div>

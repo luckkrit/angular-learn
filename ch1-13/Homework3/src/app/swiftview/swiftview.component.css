@@ -1,0 +1,498 @@
+.open {
+  animation-name: open;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.close {
+  animation-name: close;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes open {
+  from {
+    visibility: visible;
+    width: 50px;
+  }
+  to {
+    visibility: visible;
+    width: 100px;
+  }
+}
+
+@keyframes close {
+  from {
+    visibility: visible;
+    width: 100px;
+  }
+  to {
+    visibility: hidden;
+    width: 50px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  color: #181818;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 12px 39px;
+}
+
+a.btn:hover {
+  color: #fff;
+  background: #181818;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.btn.btn-transparent {
+  height: 50px;
+  background: 0 0;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 15px;
+}
+
+.btn.btn-red {
+  height: 50px;
+  background: #db2b36;
+  border: none;
+  border-bottom: 3px solid #a8212a;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btn-search {
+  background: url(https://www.swiftview.com/wp-content/themes/swiftview/img/icon-search.png)
+    center center no-repeat;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  cursor: default;
+}
+
+.btn-search:hover {
+  cursor: pointer;
+}
+
+.input-search {
+  width: 50px;
+  display: inline-block;
+  visibility: hidden;
+  margin-right: 10px;
+}
+
+.container {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  max-width: 1210px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  grid-auto-rows: minmax(50px, auto);
+  background-color: #fff;
+}
+
+.header {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+
+.header .header-row {
+  display: flex;
+  width: 100%;
+}
+
+.header .header-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.menu-wrapper .navigation ul {
+  width: 100%;
+}
+
+.menu-wrapper .navigation ul li {
+  display: inline-block;
+  text-align: right;
+}
+
+.menu-wrapper .navigation ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #181818;
+  padding: 20px 0 20px 20px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.menu-wrapper .navigation ul li a.active {
+  font-weight: 700;
+}
+
+.navigation {
+  padding-top: 15px;
+}
+
+.menu {
+  background-color: #38495b;
+}
+
+.menu ul {
+}
+
+.menu ul li {
+  display: inline-block;
+  border-right: 1px solid white;
+  width: 150px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.menu ul li a:hover {
+  font-weight: 400;
+}
+
+.menu ul li:last-child {
+  min-width: 86px;
+  max-width: 300px;
+  border-right: 0;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.hero {
+  grid-column: 1/5;
+  grid-row: 2;
+  background-color: rgb(22, 86, 160);
+}
+
+.hero .hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-col {
+  display: inherit;
+  flex-direction: column;
+  align-items: inherit;
+  justify-content: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .hero-col .hero-description {
+  display: flex;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+
+.hero .hero-col .hero-description .btn-groups {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.hero .hero-col .hero-description .sub-description {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 22px;
+  max-width: 590px;
+  text-shadow: 0 0;
+  margin: 0 0 18px;
+}
+
+.hero .hero-col .hero-description h1 {
+  font-size: 40px;
+  line-height: 42px;
+  margin-bottom: 27px;
+  max-width: 590px;
+  font-weight: 300;
+  text-shadow: 0 0;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.marketing {
+  grid-column: 1/5;
+  grid-row: 3;
+  background-color: #fff;
+}
+
+.marketing .top {
+  background-color: #d9d9d9;
+}
+
+.marketing .bottom {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.marketing .bottom .marketing-row {
+  display: flex;
+}
+
+.marketing .bottom .marketing-col {
+  width: 50%;
+}
+
+.marketing .top ul {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.marketing .top ul li {
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  height: 82px;
+  padding: 0 15px;
+}
+
+.marketing .top ul li.active {
+  background-color: #fff;
+}
+
+.marketing .top ul li.active a {
+  font-weight: 700;
+}
+
+.marketing .top ul li a {
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 21px;
+  color: #000000;
+  text-decoration: none;
+  vertical-align: center;
+  padding: 23px 0;
+}
+
+.marketing .top ul li a:hover {
+  background-color: #eee;
+  border-color: #eee #eee #ddd;
+}
+
+.marketing .top ul li.active a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.marketing .bottom .tab-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  width: 562px;
+  padding: 50px;
+}
+
+.marketing .bottom .tab-content ul {
+  list-style: disc;
+}
+
+.marketing .bottom .tab-content ul li {
+  margin: 10px 0;
+}
+
+.marketing .bottom .tab-content ul li a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.marketing .bottom .tab-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.support {
+  grid-column: 1/5;
+  grid-row: 4;
+  background-color: #d9d9d9;
+  padding: 58px 0 80px;
+}
+
+.support-row {
+  display: flex;
+}
+
+.support .support-col {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+}
+
+.support .support-col .support-articles {
+  padding: 30px;
+}
+
+.support .support-col .support-articles li {
+  margin: 0 0 18px;
+}
+
+.support .support-col .support-articles a {
+  text-decoration: none;
+  color: #0c5980;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.support .support-col .support-header {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 18px;
+}
+
+.support .support-col .blog {
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  min-height: 292px;
+}
+
+.sitemap {
+  grid-column: 1/5;
+  grid-row: 5;
+  background: #465f79;
+}
+
+.sitemap-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sitemap .sitemap-col {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+
+.sitemap .sitemap-col .sitemap-header {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.sitemap .sitemap-col li {
+  margin-bottom: 2px;
+  line-height: 16px;
+}
+
+.sitemap .sitemap-col a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.footer {
+  grid-column: 1/5;
+  grid-row: 6;
+  font-size: 13px;
+  color: white;
+  background: #38495b;
+  min-height: 100px;
+  padding: 10px 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .copyright {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 60px;
+}
+
+.footer .linkedin {
+  background: url(https://www.swiftview.com/wp-content/uploads/2015/03/icon-linkedin.png)
+    no-repeat;
+  width: 34px;
+  height: 34px;
+  float: right;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer .contact {
+  line-height: 60px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #fff;
+}
