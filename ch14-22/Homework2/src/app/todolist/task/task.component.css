@@ -1,0 +1,7 @@
+.list-group-item:hover {
+  background-color: #82cfef;
+}
+
+.list-group-item-selected {
+  background-color: lightcoral;
+}

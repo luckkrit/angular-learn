@@ -1,0 +1,54 @@
+<div class="container">
+  <h3>
+    My Tasks
+    <small class="text-muted">Let's create some tasks</small>
+  </h3>
+  <div class="row mt-5">
+    <div class="col-8">
+      <blockquote class="blockquote" *ngIf="tasks.length === 0">
+        <p class="mb-0">Oops! Empty Tasks</p>
+        <footer class="blockquote-footer">Let's create some task</footer>
+      </blockquote>
+
+      <ul class="list-group list-group-flush">
+        <app-task
+          *ngFor="let t of tasks; index as i"
+          [task]="t"
+          (OnDeleteTask)="deleteTask($event)"
+          (OnSelectedTask)="selectedTask($event)"
+        ></app-task>
+      </ul>
+    </div>
+    <div class="col-4">
+      <form>
+        <div class="form-group">
+          <label for="task">Task name</label>
+          <input type="text" class="form-control" id="task" #task />
+          <small id="emailHelp" class="form-text text-muted"
+            >Any thing you want to do like reading a book, etc.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="description">Task description</label>
+          <textarea
+            class="form-control"
+            id="description"
+            rows="3"
+            #description
+          ></textarea>
+        </div>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          (click)="
+            addTask(task.value, description.value);
+            task.value = '';
+            description.value = ''
+          "
+        >
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
