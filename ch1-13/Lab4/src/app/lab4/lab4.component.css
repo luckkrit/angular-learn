@@ -1,0 +1,9 @@
+p{
+  padding: 10px;
+}
+.number-even{
+  color: green;
+}
+.number-odd{
+  color: red;
+}

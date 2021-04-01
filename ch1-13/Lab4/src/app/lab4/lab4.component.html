@@ -1,0 +1,4 @@
+<div *ngFor="let n of numbers">
+  <p *ngIf="n%2===0" [class.number-even]="n%2===0">{{n}}</p>
+  <p *ngIf="n%2===1" [class.number-odd]="n%2===1">{{n}}</p>
+</div>
