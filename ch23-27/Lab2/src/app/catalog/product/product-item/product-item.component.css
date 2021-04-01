@@ -1,0 +1,24 @@
+.product-name {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.product-description {
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+
+.product-price,
+.product-quantity {
+  padding: 5px;
+}
+
+.btn-panel {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.btn-panel button {
+}
