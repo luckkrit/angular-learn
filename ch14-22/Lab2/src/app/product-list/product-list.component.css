@@ -1,0 +1,13 @@
+.product-list {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  border: 1px solid black;
+  border-radius: 5px 5px;
+  padding: 5px;
+  margin: 5px;
+  flex: 0 1 250px;
+}
