@@ -1,0 +1,17 @@
+<div class="scene">
+  <div class="car" [style.transform]="'translateX('+speed+'px)'"></div>
+  <div class="road-stripe">
+    <div class="stripe"></div>
+  </div>
+  <div class="road"></div>
+</div>
+<div class="console">
+  <div class="speed-text">{{"speed"|uppercase}}</div>
+  <div class="speed">{{speed/10}}</div>
+  <div class="accelerator" (click)="increase()">
+    Accelerate
+  </div>
+  <div class="brake" (click)="decrease()">
+    Brake
+  </div>
+</div>
